@@ -9,8 +9,7 @@ import requests
 import json
 
 def getHealthCode():
-  payload = {"standbycode":"400"}
-  r = requests.get(verify=False,url='https://127.0.0.1:8200/v1/sys/health', params=payload)
+  r = requests.get(verify=False,url='https://127.0.0.1:8200/v1/sys/health')
   results = r.json()
   return results["standby"]
 
